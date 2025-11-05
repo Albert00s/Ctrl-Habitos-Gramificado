@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Hábitos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="carregando">
+    <div class="spinner"></div>
+    <p>Carregando sua rotina...</p>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <main id="painel" class="oculto">
+    <div class="container">
+      <h1>Controle de Hábitos 🔥</h1>
+
+      <section class="perfil">
+        <h2>Nível <span id="nivel">1</span></h2>
+        <div class="barra-xp">
+          <div id="barra-xp" class="xp"></div>
+        </div>
+        <p><span id="xp-atual">0</span> / <span id="xp-total">100</span> XP</p>
+      </section>
+
+      <section class="habitos">
+        <h2>Seus Hábitos</h2>
+        <div class="entrada-habito">
+          <input type="text" id="novo-habito" placeholder="Ex: Beber 2L de água" />
+          <button id="adicionar-habito">Adicionar</button>
+        </div>
+        <ul id="lista-habitos"></ul>
+      </section>
+
+      <button id="resetar" class="botao-resetar">🔄 Resetar Progresso</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Estilos gerais */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+/* Container central */
+.container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: surgir 0.8s ease;
+}
+
+/* Preloader */
+#carregando {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.spinner {
+  border: 6px solid #ddd;
+  border-top: 6px solid #66a6ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.oculto {
+  display: none;
+}
+
+/* Barra de XP */
+.barra-xp {
+  background-color: #eee;
+  height: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.xp {
+  background-color: #66a6ff;
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+/* Lista de hábitos */
+.entrada-habito {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+#novo-habito {
+  padding: 10px;
+  flex: 1;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#adicionar-habito {
+  padding: 10px 15px;
+  background-color: #66a6ff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#adicionar-habito:hover {
+  background-color: #5590e6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #f1faff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: surgir 0.4s ease;
+}
+
+li.concluido span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+li button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.botao-concluir {
+  background-color: #4caf50;
+}
+
+.botao-remover {
+  background-color: #f44336;
+}
+
+/* Botão de reset */
+.botao-resetar {
+  margin-top: 20px;
+  background-color: #ff9800;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-resetar:hover {
+  background-color: #e68900;
+}
+
+@keyframes surgir {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  #novo-habito {
+    font-size: 14px;
+  }
+
+  #adicionar-habito {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  li button {
+    width: 100%;
+  }
+}
